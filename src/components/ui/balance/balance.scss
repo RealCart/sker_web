@@ -1,0 +1,61 @@
+
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
+.balance {
+    z-index: 1;
+    position: relative;
+    padding: 20px 14px 14px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    &::after {
+        z-index: -1;
+        @include pseudo();
+        inset: 0;
+        background: radial-gradient(60% 110% at 97.65% 0%, #37C063 0%, rgba(37, 52, 41, 0) 100%),
+        radial-gradient(60% 110% at 0% 4.79%, #3C719C 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    &::before {
+        z-index: -2;
+        @include pseudo();
+        inset: 0;
+        background-color: $dark;
+    }
+
+    &__title {
+        color: #5B7D98;
+        text-align: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        margin-bottom: 5px;
+    }
+    
+    &__sum {
+        color: #fff;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__buttons {
+        @include flex(space-between);
+        gap: 6px;
+    }
+
+    &__button {
+        width: 100%;
+        font-weight: 400;
+        color: #fff;
+
+        &--history {
+            background-color: #31485A;
+            border-color: #31485A;
+        }
+    }
+
+}

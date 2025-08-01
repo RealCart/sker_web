@@ -1,0 +1,34 @@
+[
+	{
+		"label": "Дорожная техника",
+		"value": "roadEquipment"
+	},
+	{
+		"label": "Погрузка",
+		"value": "loading"
+	},
+	{
+		"label": "Разгрузка",
+		"value": "unloading"
+	},
+	{
+		"label": "Эвакуатор",
+		"value": "towTruck"
+	},
+	{
+		"label": "Доставка",
+		"value": "delivery"
+	},
+	{
+		"label": "Коммунальная техника",
+		"value": "utilityEquipment"
+	},
+	{
+		"label": "Для дома",
+		"value": "forHome"
+	},
+	{
+		"label": "Сельхоз техника",
+		"value": "farmingEquipment"
+	}
+]

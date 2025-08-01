@@ -1,0 +1,155 @@
+/* Block: new-order */
+.new-order {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px 24px 24px;
+
+    .form-container {
+        .form-title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 130%;
+            text-align: center;
+            color: #252525;
+        }
+
+        .technique-search {
+            position: relative;
+            width: 100%;
+
+            &__results {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                margin-top: 4px;
+                max-height: 300px;
+                overflow-y: auto;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            &__result {
+                width: 100%;
+                padding: 12px 16px;
+                text-align: left;
+                background: none;
+                border: none;
+                border-bottom: 1px solid #f0f0f0;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: background-color 0.3s;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                &:hover {
+                    background-color: #f5f5f5;
+                }
+
+                &.selected {
+                    background-color: #fff8f0;
+                    color: #ff6b00;
+
+                    .checkmark {
+                        width: 16px;
+                        height: 16px;
+                        fill: #ff6b00;
+                    }
+                }
+            }
+        }
+
+        .selected-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            .selected-type {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 12px;
+                background-color: #252525;
+                border: none;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+        }
+
+        .date-time {
+            display: flex;
+            gap: 12px;
+
+            &__name {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 8px;
+            }
+
+            &__inputs {
+                display: flex;
+                gap: 16px;
+            }
+
+            &__input {
+                flex: 1;
+
+                .u-input {
+                    background-color: #f3f3f3;
+                    border: 1px solid #dcdcdc;
+                    border-radius: 16px;
+                    padding: 12px;
+                    font-size: 14px;
+                    color: #333;
+                    cursor: pointer;
+                    transition: border-color 0.3s;
+
+                    &:focus {
+                        outline: none;
+                        border-color: #ff6b00;
+                    }
+
+                    &__icon {
+                        width: 16px;
+                        height: 16px;
+                        fill: #666;
+                    }
+                }
+            }
+        }
+    }
+
+    .submit-button {
+        margin-top: 16px;
+        background-color: #ff6b00;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #e55c00;
+        }
+    }
+}

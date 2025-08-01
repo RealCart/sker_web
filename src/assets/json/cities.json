@@ -1,0 +1,42 @@
+[
+	{
+		"label": "Алматы",
+		"value": 1,
+		"coordinates": {
+			"latitude": 43.238949,
+			"longitude": 76.889709,
+			"latitudeDelta": 0.0922,
+			"longitudeDelta": 0.0421
+		}
+	},
+	{
+		"label": "Астана",
+		"value": 2,
+		"coordinates": {
+			"latitude": 51.169392,
+			"longitude": 71.449074,
+			"latitudeDelta": 0.0922,
+			"longitudeDelta": 0.0421
+		}
+	},
+	{
+		"label": "Шымкент",
+		"value": 3,
+		"coordinates": {
+			"latitude": 42.341717,
+			"longitude": 69.590099,
+			"latitudeDelta": 0.0922,
+			"longitudeDelta": 0.0421
+		}
+	},
+	{
+		"label": "Караганда",
+		"value": 4,
+		"coordinates": {
+			"latitude": 49.806003,
+			"longitude": 73.085506,
+			"latitudeDelta": 0.0922,
+			"longitudeDelta": 0.0421
+		}
+	}
+]

@@ -1,0 +1,39 @@
+/* Block: u-button */
+.u-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ff4f00; // Оранжевый цвет по умолчанию
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #e64300; // Темнее при наведении
+    }
+
+    &:disabled {
+        background-color: #cccccc; // Серый цвет для отключенной кнопки
+        cursor: not-allowed;
+    }
+
+    &--with-icon {
+        justify-content: space-between;
+        padding: 16px;
+    }
+}
+
+.u-button__text {
+    margin-right: 8px; // Отступ между текстом и иконкой
+}
+
+.u-button__icon {
+    display: flex;
+    align-items: center;
+}

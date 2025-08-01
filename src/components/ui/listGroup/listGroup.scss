@@ -1,0 +1,64 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.list {
+    position: relative;
+    @include flex(stretch, stretch, column);
+    padding: 4px 0;
+    @include text-style(400, 14px, 18px);
+    background-color: $white;
+    box-shadow: 0 10px 34px 0 #C1D1D838;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.list-item {
+    position: relative;
+    @include flex(space-between, center);
+    padding: 16px 18px;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &--switch {
+        padding: 10px 18px;
+    }
+
+    &:not(:last-child):after {
+        @include pseudo();
+        inset: auto 18px 0;
+        height: 1px;
+        background-color: #E4F1FB;
+    }
+
+    &__icon {
+        margin-right: 20px;
+        color: #98ADBD;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__content {
+        @include flex(center, stretch, column);
+        flex: 1;
+    }
+
+    &__error {
+        @include text-style(400, 10px, 11px, $red);
+    }
+
+    &__arrow {
+        color: #98ADBD;
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

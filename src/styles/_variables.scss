@@ -1,0 +1,57 @@
+// Colors
+$green: #37C063;
+$dark: #252525;
+$white: #FFF;
+$dark-gray: #98ADBD;
+$gray-001: #98ADBD;
+$gray-002: #CBDBE7;
+$gray-003: #D5E4F0;
+$gray-004: #E4F1FB;
+$background: #F3F3F3;
+$blue: #1388FF;
+$red: #F55353;
+$blue-light: #DBEFFF;
+$green-light: #C6F5D5;
+$red-light: #FFE3E3;
+$shadow: #BED4E6;
+$shadow2: #BED4E6;
+$hover-green: #37B15E;
+$hover-dark: #505050;
+$hover-gray-002: #D2E1EE;
+$orange: #FF4F00;
+$yellow: #FFEC2D;
+
+// Font Sizes
+$regular-10: 10px;
+$regular-12: 12px;
+$regular-14: 14px;
+$regular-16: 16px;
+$regular-18: 18px;
+
+// Border Radius
+$border-7: 7px;
+$border-10: 10px;
+$border-12: 12px;
+$border-16: 16px;
+$border-20: 20px;
+$border-none: 0;
+$border-sm: 0.125rem;
+$border-default: 0.25rem;
+$border-default-px: 4px;
+$border-md: 0.375rem;
+$border-lg: 0.5rem;
+$border-full: 9999px;
+$border-large: 12px;
+
+// Media
+$breakpoints: (
+    'phone': 480px,
+    'tablet': 768px,
+    'desktop': 1024px,
+    'large': 1200px
+);
+
+// bootstrap
+$primary: $orange;
+$secondary: $green;
+$info: #E4F1FB;

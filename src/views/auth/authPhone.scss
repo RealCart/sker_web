@@ -1,0 +1,23 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.auth-phone {
+    background-color: #fff;
+    padding: 40px 14px 26px;
+    justify-content: space-between;
+
+    &__form {
+        @include flex(flex-start, stretch, column);
+        gap: 40px;
+    }
+
+    &__text {
+        @include flex(flex-start, stretch, column);
+        gap: 16px;
+    }
+
+    &__agreement {
+        @include text-style(400, 12px, 14px, #98ADBD);
+
+    }
+}

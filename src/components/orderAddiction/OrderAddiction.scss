@@ -1,0 +1,35 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.order-addiction {
+    @include flex(flex-start, stretch, column);
+    gap: 14px;
+
+    &__title {
+        @include text-style(700, 16px, 21px);
+    }
+
+    &__vehicles {
+        @include flex(flex-start, stretch, row, wrap);
+        gap: 10px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #EEEEEE;
+
+        &-item {
+            @include text-style(400, 14px, 18px);
+            padding: 10px 12px;
+            border-radius: 8px;
+            background-color: $dark;
+            color: $white;
+        }
+    }
+
+    &__description {
+        @include text-style(400, 14px, 18px, #7A7A7A);
+    }
+
+    &__date {
+        @include text-style(400, 10px, 11px, #7C7C7C);
+    }
+}

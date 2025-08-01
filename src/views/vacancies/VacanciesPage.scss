@@ -1,0 +1,100 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.vacancies {
+    position: relative;
+    @include flex(stretch, stretch, column);
+    gap: 6px;
+    padding: 14px 14px 100px;
+
+    &__add {
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 100px;
+    }
+}
+
+.vacancy {
+    padding: 18px 18px 20px;
+    border-radius: 16px;
+    background-color: $white;
+
+    &__time {
+        @include text-style(400, 12px, 14px, #98ADBD);
+        margin-bottom: 4px;
+    }
+
+    &__badge {
+        width: fit-content;
+        @include text-style(400, 12px, 14px, #fff);
+        padding: 6px;
+        border-radius: 7px;
+        margin-bottom: 14px;
+
+        &--published {
+            background-color: $dark;
+        }
+
+        &--archived {
+            background-color: #5B7D98;
+        }
+    }
+
+    &__title {
+        @include text-style(700, 16px, 21px);
+        margin-bottom: 14px;
+    }
+
+    &__location {
+        @include flex(flex-start, center);
+        gap: 7px;
+
+        margin-bottom: 14px;
+
+        &-icon {
+            width: 14px;
+            height: 14px;
+            color: $green;
+        }
+        
+        span {
+            position: relative;
+            @include text-style(400, 14px, 20px);
+
+            &:after {
+                @include pseudo();
+                left: -2px;
+                right: -2px;
+                bottom: 1px;
+                height: 1px;
+                background-color: #D5E4F0;
+            }
+        }
+    }
+
+    &__row {
+        @include flex(space-between, center);
+    }
+
+    &__salary {
+        @include text-style(700, 18px, 24px);
+    }
+
+    &__stats {
+        @include flex(center, center);
+        gap: 11px;
+    }
+
+    &__stat {
+        @include flex(center, center);
+        gap: 5px;
+        @include text-style(400, 12px, 14px, #98ADBD);
+
+        &-icon {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}

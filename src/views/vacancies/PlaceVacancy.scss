@@ -1,0 +1,23 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.place-vacancy {
+    @include flex(space-between, stretch, column);
+    gap: 24px;
+
+    &__cards {
+        @include flex(flex-start, stretch, column);
+        gap: 12px;
+    }
+
+    &__bottom {
+        @include flex(space-between, stretch, column);
+        gap: 40px;
+    }
+
+    &__row {
+        @include text-style(700, 18px, 21px);
+        @include flex(space-between);
+    }
+}

@@ -1,0 +1,36 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.team-card {
+    @include flex(flex-start, center);
+    gap: 14px;
+    padding: 14px;
+    border-radius: 16px;
+    background-color: $white;
+
+    &__photo {
+        width: 54px;
+        height: 54px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+    
+    &__info {
+        @include flex(flex-start, stretch, column);
+        flex: 1;
+        gap: 2px;
+    }
+
+    &__job {
+        @include text-style(400, 10px, 11px, $gray-001);
+    }
+
+    &__name {
+        @include text-style(700, 16px, 21px);
+    }
+
+    &__phone {
+        @include text-style(400, 14px, 18px, $gray-001);
+    }
+}

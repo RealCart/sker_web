@@ -1,0 +1,84 @@
+
+@import "/src/styles/variables";
+@import "/src/styles/mixins";
+
+.transactions {
+    @include flex(stretch, stretch, column);
+    position: relative;
+    flex: 1;
+    padding: 30px 14px 20px;
+
+    &__empty {
+        @include flex(space-between, center, column);
+        padding: 70px 0 0;
+        flex: 1;
+
+        &-top {
+            @include flex(center, center, column);
+            gap: 40px;
+        }
+        
+        &-icon {
+            color: #CBDBE7;
+        }
+
+        &-text {
+            @include text-style(400, 14px, 18px, #CBDBE7);
+            text-align: center;
+        }
+
+        &-button {
+            width: 100%;
+        }
+    }
+}
+
+.transaction {
+    @include flex(stretch, stretch, column);
+    gap: 6px;
+    border-radius: 16px;
+    padding: 18px;
+    background-color: $white;
+
+    &:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
+    &__type {
+        @include text-style(700, 14px, 18px);
+    }
+
+    &__date {
+        @include flex(stretch, stretch);
+        gap: 6px;
+        @include text-style(400, 12px, 14px, #5B7D98);
+    }
+
+    &__amount {
+        @include text-style(700, 18px, 23px);
+    }
+
+    &__row {
+        @include flex(space-between, center, row, wrap);
+        gap: 20px;
+    }
+
+    &__badge {
+        padding: 6px;
+        @include text-style(400, 12px, 14px, $white);
+        border-radius: 7px;
+        background-color: $dark;
+
+        &--green {
+            background-color: $green;
+        }
+
+        &--black {
+            background-color: $dark;
+        }
+
+        &--error {
+            background-color: $red;
+        }
+    }
+}

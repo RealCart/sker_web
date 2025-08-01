@@ -1,0 +1,85 @@
+
+@import "/src/styles/variables";
+@import "/src/styles/mixins";
+
+.vehicle-slider {
+    display: flex;
+    gap: 5px;
+    padding: 16px 0 16px 0;
+    background-color: #f3f3f3;
+    border-radius: 16px;
+
+    &__all {
+        @include flex(space-between, center, column);
+        @include button-reset();
+        height: 100%;
+        width: 68px;
+        padding: 20px 0 16px;
+        background-color: #ffffff;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: transform .2s ease;
+
+        &:active {
+            transform: scale(.98);
+        }
+    }
+
+    &__dots {
+        @include flex(center, center, row, wrap);
+        width: 20px;
+        height: 20px;
+        gap: 2px;
+    }
+
+    &__dot {
+        width: 9px;
+        height: 9px;
+        background-color: #ff4f00;
+        border-radius: 3px;
+    }
+
+    &__label {
+        @include text-style(400, 14px, 14px, $dark);
+        text-align: center;
+        word-break: break-word;
+    }
+
+    & > &__list {
+        padding: 0 14px;
+    }
+
+    &__item {
+        @include flex(space-between, center, column);
+        gap: 6px;
+        width: 107px;
+        height: 100%;
+        padding: 16px 8px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: transform .2s ease;
+
+        &:active {
+            transform: scale(.98);
+        }
+
+        &--active {
+            background-color: #FFEEE7;
+        }
+
+        &--small {
+            width: 124px;
+        }
+
+        &--big {
+            width: 48%;
+        }
+    }
+
+    &__icon {
+        width: 64px;
+        height: 64px;
+    }
+}

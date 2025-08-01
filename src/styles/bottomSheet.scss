@@ -1,0 +1,74 @@
+
+@import "mixins";
+@import "variables";
+
+[data-rsbs-overlay] {
+    z-index: 900;
+}
+
+[data-rsbs-header]:before {
+    background-color: #7C7C7C;
+    width: 40px;
+    height: 6.75px;
+    border-radius: 100px;
+}
+
+[data-rsbs-backdrop] {
+    z-index: 899;
+    background-color: rgba(37, 37, 37, 0.8)
+}
+
+
+.bottom-sheet {
+    &--multiselect {
+        [data-rsbs-overlay] {
+            z-index: 902;
+        }
+        [data-rsbs-backdrop] {
+            z-index: 901;
+        }
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 42px 10px 42px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+
+        &-back {
+            position: absolute;
+            left: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: none;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+        }
+
+        &-clear {
+            position: absolute;
+            right: 14px;
+            @include button-reset();
+            @include text-style(700, 14px, 18px, $primary);
+        }
+    }
+
+    &__body {
+        padding: 16px 14px 0;
+        min-height: 400px;
+    }
+
+    &__footer {
+        margin-top: 28px;
+        border-top: 1px solid #EEEEEE;
+        padding: 16px 14px;
+    }
+}

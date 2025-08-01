@@ -1,0 +1,42 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 31px;
+
+    &__input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .switch__slider {
+            background-color: $green;
+        }
+
+        &:checked + .switch__slider:before {
+            transform: translateX(20px);
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        inset: 0;
+        background-color: #DFDFE1;
+        border-radius: 20px;
+        transition: 0.3s;
+
+        &:before {
+            @include pseudo();
+            inset: 2px;
+            height: 27px;
+            width: 27px;
+            background-color: white;
+            box-shadow: 0 3px 8px 0 #00000026;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+    }
+}

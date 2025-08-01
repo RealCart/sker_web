@@ -1,0 +1,41 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.placement-card {
+    position: relative;
+    border: 1px solid $gray-003;
+    background-color: #F7FBFF;
+    border-radius: 16px;
+    padding: 18px;
+
+    &__check {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+
+        input:checked {
+            background-color: $green;
+            border-color: $green;
+        }
+    }
+
+    &__title {
+        @include text-style(700, 16px, 21px);
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        @include text-style(400, 14px, 18px, #5B7D98);
+        margin-bottom: 18px;
+    }
+
+    &__row {
+        @include flex(space-between);
+        @include text-style(700, 14px, 23px);
+    }
+
+    &__price {
+        font-size: 18px;
+    }
+}

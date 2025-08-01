@@ -1,0 +1,15 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.code-input {
+    @include flex(space-between, center);
+    gap: 12px;
+    padding: 8px 0;
+
+    input {
+        flex: 1;
+        @include text-style(400, 16px, 19px);
+        text-align: center;
+    }
+}

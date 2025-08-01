@@ -1,0 +1,23 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.team-list {
+    gap: 9px;
+
+    &__empty {
+        @include flex(center, center, column);
+        gap: 40px;
+        flex: 1;
+
+        &-icon {
+            width: 100px;
+            height: auto;
+        }
+
+        &-text {
+            text-align: center;
+            padding: 0 64px;
+        }
+    }
+}

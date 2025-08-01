@@ -1,0 +1,21 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.add-vacancy {
+    gap: 24px;
+    background-color: $white;
+
+    &__block {
+        @include flex(flex-start, stretch, column);
+        gap: 12px;
+    }
+
+    &__check {
+        text-align: left;
+    }
+
+    &__text {
+        @include text-style(400, 12px, 14px, $gray-001);
+    }
+}

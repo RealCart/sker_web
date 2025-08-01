@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "769835159872",
+    "project_id": "skerr-b387b",
+    "storage_bucket": "skerr-b387b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769835159872:android:861cc09bf3aac6136caaa5",
+        "android_client_info": {
+          "package_name": "com.ampersander.skier"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3h8bn5mNZz1KUuAZIo-eCxU-1IReBjSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

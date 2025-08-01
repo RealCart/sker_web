@@ -1,0 +1,42 @@
+@import "variables";
+@import "mixins";
+
+$dropdown-dark-color:               inherit;
+$dropdown-dark-bg:                  $dark;
+$dropdown-dark-border-color:        transparent;
+$dropdown-dark-divider-bg:          transparent;
+$dropdown-dark-box-shadow:          null;
+$dropdown-dark-link-hover-color:    inherit;
+$dropdown-dark-link-hover-bg:       transparent;
+$dropdown-dark-link-active-bg:      transparent;
+
+$dropdown-link-hover-bg:            transparent;
+
+$dropdown-link-active-bg:           transparent;
+$dropdown-border-radius:            12px;
+
+.dropdown {
+
+    &-menu {
+        min-width: 216px !important;
+        padding: 6px 0 !important;
+    }
+
+    &-toggle {
+        &:after {
+            display: none !important;
+        }
+    }
+
+    &-item {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 14px;
+
+        .reactsvg {
+            width: 16px;
+        }
+    }
+}

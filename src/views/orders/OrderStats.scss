@@ -1,0 +1,12 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.orders-stats {
+    @include flex(stretch, stretch, column);
+    padding: 25px 14px;
+
+    &__download {
+        margin-top: 30px;
+    }
+}

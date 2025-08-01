@@ -1,0 +1,70 @@
+/* Block: u-input */
+.u-input {
+    position: relative;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+    &__field {
+        width: 100%;
+        height: 50px;
+        padding: 14px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background-color: transparent;
+        color: #333;
+
+        &::placeholder {
+            color: #98adbd;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 12px;
+        color: #98adbd;
+        pointer-events: none;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        color: #7C7C7C;
+    }
+
+    /* Modifier: textarea */
+    &--textarea {
+        .u-input__field {
+            min-height: 104px;
+            resize: none;
+        }
+    }
+
+    /* Modifier: search */
+    &--search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .u-input__field {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .u-input__icon {
+            margin-right: 8px;
+        }
+    }
+}

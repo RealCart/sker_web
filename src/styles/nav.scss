@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+$nav-link-padding-x:                .5rem;
+
+$nav-link-font-size:                14px;
+$nav-link-font-weight:              18px;
+$nav-link-color:                    $dark;
+$nav-link-focus-box-shadow:         none;
+
+$nav-tabs-border-color:             transparent;
+$nav-tabs-border-width:             0;
+$nav-tabs-border-radius:            7px;
+$nav-tabs-link-active-color:        $white;
+
+$nav-pills-border-radius:           7px;
+$nav-pills-link-active-color:       $white;
+$nav-pills-link-active-bg:          $primary;
+
+.nav {
+    @include flex(center, center, row);
+    flex-wrap: nowrap !important;
+    flex-shrink: 0;
+    gap: 4px;
+    padding: 4px !important;
+    background-color: #E8E8E8;
+    border-radius: 10px;
+
+    &-item {
+        flex: 1;
+        flex-shrink: 0;
+    }
+
+    &-link {
+        text-align: center;
+        line-height: 18px;
+        white-space: nowrap;
+        flex-shrink: 0;
+
+        &:not(.active) {
+            background-color: $white !important;
+        }
+    }
+}

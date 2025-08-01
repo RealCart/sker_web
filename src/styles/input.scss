@@ -1,0 +1,151 @@
+
+@import "variables";
+@import "mixins";
+
+$input-padding-y:                       16px;
+$input-padding-x:                       16px;
+$input-font-size:                       14px;
+
+$input-bg:                              #F3F3F3;
+$input-disabled-bg:                     #e4e4e4;
+
+$input-color:                           #252525;
+$input-border-color:                    transparent;
+$input-box-shadow:                      none;
+
+$input-border-width:                    1px;
+$input-border-radius:                   8px;
+
+$input-focus-border-color:              none;
+$input-focus-color:                     none;
+$input-focus-width:                     0;
+$input-focus-box-shadow:                none;
+
+$input-placeholder-color:               #7C7C7C;
+$input-plaintext-color:                 #7C7C7C;
+
+$input-height:                          52px;
+
+$form-floating-height:                  52px;
+$form-floating-line-height:             16px;
+$form-floating-padding-y:               14px;
+$form-floating-input-padding-t:         1.625rem;
+$form-floating-input-padding-b:         .625rem;
+$form-floating-label-height:            50px;
+$form-floating-label-opacity:           .65;
+$form-floating-label-transform:         scale(.85) translateY(-.5rem) translateX(.15rem);
+
+$input-group-addon-font-weight:         700;
+$input-group-addon-color:               #7C7C7C;
+$input-group-addon-bg:                  #F3F3F3;
+$input-group-addon-border-color:        transparent;
+$input-group-addon-padding-y:           0;
+$input-group-addon-padding-x:           14px;
+
+$form-floating-input-padding-b:   9px;
+$form-select-focus-border-color:  transparent;
+$form-select-focus-width:         0;
+$form-select-focus-box-shadow:    none;
+
+// CHECK
+$form-check-input-bg:                     transparent;
+$form-check-input-border:                 1px solid #E5E5E5;
+$form-check-input-border-radius:          6px;
+$form-check-input-focus-border:           1px solid #E5E5E5;
+$form-check-input-focus-box-shadow:       transparent;
+$form-check-input-checked-color:          #fff;
+$form-check-input-checked-bg-color:       #252525;
+$form-check-input-checked-border-color:   #252525;
+//$form-check-input-checked-bg-image:       url("@/assets/icons/");
+
+$form-feedback-margin-top: 4px;
+$form-feedback-font-size: 12px;
+//$form-feedback-valid-color:         $success;
+//$form-feedback-invalid-color:       $danger;
+
+$form-valid-color:                  transparent;
+$form-valid-border-color:           transparent;
+$form-invalid-color:                transparent;
+$form-invalid-border-color:         $red;
+
+$form-feedback-icon-valid-color:    transparent;
+$form-feedback-icon-valid:          unset;
+$form-feedback-icon-invalid:        url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.9401 5.41994L13.7701 2.42994C12.7801 1.85994 11.2301 1.85994 10.2401 2.42994L5.02008 5.43994C2.95008 6.83994 2.83008 7.04994 2.83008 9.27994V14.7099C2.83008 16.9399 2.95008 17.1599 5.06008 18.5799L10.2301 21.5699C10.7301 21.8599 11.3701 21.9999 12.0001 21.9999C12.6301 21.9999 13.2701 21.8599 13.7601 21.5699L18.9801 18.5599C21.0501 17.1599 21.1701 16.9499 21.1701 14.7199V9.27994C21.1701 7.04994 21.0501 6.83994 18.9401 5.41994ZM12.0001 15.2499C10.2101 15.2499 8.75008 13.7899 8.75008 11.9999C8.75008 10.2099 10.2101 8.74994 12.0001 8.74994C13.7901 8.74994 15.2501 10.2099 15.2501 11.9999C15.2501 13.7899 13.7901 15.2499 12.0001 15.2499Z" fill="#252525"/><rect x="2" y="2" width="20" height="20" rx="6" fill="#F55353"/><path d="M13.2642 6.36377L13.0426 14.5115H10.9631L10.7358 6.36377H13.2642ZM12.0029 18.1479C11.6279 18.1479 11.3059 18.0153 11.037 17.7501C10.768 17.4812 10.6355 17.1592 10.6392 16.7842C10.6355 16.413 10.768 16.0948 11.037 15.8297C11.3059 15.5645 11.6279 15.432 12.0029 15.432C12.3627 15.432 12.679 15.5645 12.9517 15.8297C13.2245 16.0948 13.3627 16.413 13.3665 16.7842C13.3627 17.0342 13.2964 17.2634 13.1676 17.4717C13.0426 17.6763 12.8779 17.841 12.6733 17.966C12.4688 18.0873 12.2453 18.1479 12.0029 18.1479Z" fill="white"/> </svg> ');
+
+.invalid-feedback {
+    line-height: 14px;
+}
+
+.form {
+    &-floating {
+        label {
+            font-size: 14px;
+        }
+    }
+
+    &-tel {
+        position: relative;
+
+        &::after {
+            @include pseudo('+7');
+            @include text-style(400, 16px, 19px);
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        input {
+            @include text-style(400, 16px, 18px);
+            padding-left: 46px;
+        }
+    }
+
+    &-search {
+        .input-group-text {
+            position: absolute;
+            right: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px !important;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+.rbt {
+    &.form-control,
+    &-input-multi.form-control{
+        padding: 0 !important;
+        border-radius: 8px !important;
+    }
+
+    &-input-multi {
+        border-radius: 8px;
+
+        .rbt-input-main {
+            padding: 14px !important;
+            height: 50px;
+        }
+    }
+
+    .form-control {
+        height: 50px !important;
+        overflow: hidden;
+    }
+
+    &-token {
+        display: flex;
+        width: fit-content;
+        font-size: 12px;
+        background-color: #252525;
+        color: #fff;
+        border-radius: 8px;
+    }
+}

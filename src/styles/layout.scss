@@ -1,0 +1,100 @@
+@import "variables";
+@import "mixins";
+
+.layout {
+    @include flex(center, stretch, column);
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+
+    &--dark > &__header{
+        background-color: $dark;
+        color: $white;
+    }
+
+    &__header {
+        @include pin(0, 0, auto, 0); // Фиксированное положение сверху
+        z-index: 10;
+        background-color: #ffffff;
+        padding: 0 14px;
+        color: $dark;
+
+        &-wrapper {
+            position: relative;
+            @include flex(space-between, center);
+            flex: 1;
+            height: 50px;
+        }
+
+        &-slot {
+            margin-left: auto;
+            width: 40px;
+            height: 40px;
+        }
+
+        &-bottom {
+            padding: 6px 0 15px;
+        }
+    }
+
+    &__back-button {
+        @include flex(flex-start, center);
+        @include button-reset;
+        width: 40px;
+        height: 40px;
+        color: inherit;
+
+        &-img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        right: 45px;
+        left: 45px;
+        @include text-style(bold, 16px, 20px);
+        margin: 0;
+        text-align: center;
+    }
+
+    &__content {
+        @include flex(flex-start, stretch, column);
+        width: 100%;
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    &__tabs {
+        z-index: 800;
+        @include pin(auto, 0, 0, 0); // Фиксированное положение снизу
+        background-color: #ffffff;
+
+        .tabs {
+            @include flex(space-around, center);
+            padding: 10px 0;
+
+            &__item {
+                @include flex(center, center, column);
+                @include button-reset;
+                gap: 5px;
+                @include text-style(600, 10px, 1, $dark);
+                cursor: pointer;
+                padding: 6px 0;
+                transition: color 0.3s ease;
+
+                &:hover,
+                &--active {
+                    color: #ff4f00;
+                }
+            }
+
+            &__icon {
+                width: 24px;
+                height: 24px;
+                fill: currentColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    overflow: hidden;
+    will-change: height;
+}
+
+.top-header, .bottom-header {
+    position: absolute;
+    width: 100%;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    will-change: transform, opacity;
+}
+
+.top-header {
+    top: 0;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.bottom-header {
+    bottom: 0;
+    background-color: white;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    width: 75px;
+    height: 84px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.compact-image {
+    width: 47px;
+    height: 53px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.profile-name, .compact-name {
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-dots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 3px 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    background-color: #333;
+    border-radius: 16px;
+    min-width: 215px;
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-item {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.compact-profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+}
+
+.profile-details {
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.rating-container {
+    display: flex;
+    margin-top: 8px;
+}
+
+.rating-badge {
+    padding: 4px 6px;
+    background-color: #f0f0f0;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.rating-icon {
+    margin-right: 4px;
+}
+
+.chat-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}

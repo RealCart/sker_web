@@ -1,0 +1,58 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.profile-edit {
+    padding: 20px 14px 30px;
+
+    &__photo {
+        @include flex(center, center, column);
+        gap: 24px;
+        margin-bottom: 24px;
+        @include text-style(700, 14px, 18px, $green);
+
+        &-image {
+            width: 80px;
+            height: 88px;
+            object-fit: cover;
+        }
+
+        &-input {
+            display: none;
+        }
+    }
+
+    &__buttons {
+        margin-top: 24px;
+    }
+}
+
+.tile {
+    @include flex(stretch, stretch, column);
+    gap: 12px;
+    background-color: $white;
+    padding: 18px 15px 20px;
+    border-radius: 16px;
+    box-shadow: 0 11px 50px 0 #BED4E680;
+
+    &:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        @include text-style(700, 16px, 21px);
+    }
+
+    &__text {
+        @include text-style(400, 12px, 14px, #98ADBD);
+    }
+
+    &__row {
+        @include flex(space-between, center);
+
+        &-text {
+            @include text-style();
+            max-width: 200px;
+        }
+    }
+}

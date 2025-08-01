@@ -1,0 +1,99 @@
+@import "/src/styles/variables";
+@import "/src/styles/mixins";
+
+.reviews {
+    &__list {
+        width: 100%;
+        @include flex(center, center, column);
+        gap: 14px;
+    }
+
+    &__placeholder {
+        @include flex(center, center, column);
+        flex: 1;
+        padding: 0 20px;
+
+        &-icon {
+            width: 105px;
+            color: #CBDBE7;
+            margin-bottom: 40px;
+        }
+
+        &-title {
+            @include text-style(700, 21px, 27px);
+            margin-bottom: 17px;
+        }
+
+        &-text {
+            @include text-style(400, 14px, 18px, #5B7D98);
+            text-align: center;
+        }
+    }
+}
+
+.review-card {
+    width: 100%;
+    padding-bottom: 20px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--Blue_Light, #DBEFFF);
+    }
+
+    &__date {
+        @include text-style(400, 12px, 120%, #98ADBD);
+        margin-bottom: 4px;
+    }
+
+    &__name {
+        @include text-style(700, 16px, 130%, $dark);
+        margin-bottom: 6px;
+    }
+
+    &__stars {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 6px;
+    }
+
+    &__star {
+        color: #98ADBD;
+
+        &--filled {
+            color: $green;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &__vehicles {
+        @include text-style(400, 14px, 130%, #98ADBD);
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        @include text-style(400, 14px, 130%, $dark);
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__images {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+
+    &__image {
+        width: 100px;
+        height: 112px;
+        border-radius: 8px;
+        object-fit: cover;
+        scroll-snap-align: start;
+    }
+}

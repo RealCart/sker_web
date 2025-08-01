@@ -1,0 +1,41 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.auth-code {
+    background-color: #fff;
+    padding: 40px 14px 26px;
+    justify-content: space-between;
+
+    &__form {
+        @include flex(flex-start, stretch, column);
+        gap: 30px;
+    }
+
+    &__text {
+        @include flex(flex-start, stretch, column);
+        gap: 16px;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    &__agreement {
+        @include text-style(400, 12px, 14px, #98ADBD);
+    }
+
+    &__sms-fail {
+        --bs-btn-color: #37C063 !important;
+        --bs-btn-hover-color: #37C063 !important;
+    }
+
+    &__invalid {
+        @include flex(center, center);
+        gap: 9px;
+        @include text-style(400, 12px, 14px, $red);
+
+        &-icon {
+            width: 16px;
+        }
+    }
+}

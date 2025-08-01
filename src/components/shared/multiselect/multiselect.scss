@@ -1,0 +1,39 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.multiselect {
+    &__input {
+        user-select: none;
+        user-focus: none;
+
+        &::selection {
+            background-color: transparent;
+        }
+
+        &:focus ~ label {
+            transform: unset !important;
+        }
+
+        &:not(:placeholder-shown) ~ label {
+            transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !important;
+        }
+    }
+
+    &__check {
+        @include flex(space-between, center);
+        margin: 0;
+        border-bottom: 1px solid var(--Gray_004, #E4F1FB);
+
+        label {
+            order: 0;
+            width: 100%;
+            padding: 16px 22px;
+            text-align: left;
+        }
+
+        input {
+            order: 1;
+        }
+    }
+}

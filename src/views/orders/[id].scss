@@ -1,0 +1,103 @@
+
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.order-info {
+    padding: 0;
+
+    &__details {
+        z-index: 2;
+        position: relative;
+        border-radius: 0 0 22px 22px;
+        padding: 18px 14px;
+        background-color: $white;
+        box-shadow: 0 11px 50px 0 #BCBCBC80;
+        margin-top: 20px;
+
+        &:before {
+            z-index: -2;
+            @include pseudo();
+            background-color: $dark;
+            height: 20px;
+            inset: -20px 0 0;
+        }
+        &:after {
+            z-index: -1;
+            @include pseudo();
+            background-color: $white;
+            height: 20px;
+            inset: -19px 0 0;
+            border-radius: 22px 22px 0 0;
+        }
+    }
+
+    &__status {
+        @include text-style(400, 12px, 14px, $white);
+        width: fit-content;
+        background-color: $dark;
+        padding: 6px;
+        border-radius: 7px;
+        margin-bottom: 11px;
+    }
+
+    &__title {
+        @include text-style(700, 18px, 23px);
+        margin-bottom: 16px;
+    }
+
+    &__small-title {
+        @include text-style(700, 16px, 21px);
+    }
+
+    &__row {
+        @include flex(flex-start, center);
+        gap: 30px;
+    }
+
+    &__property {
+        @include text-style(400, 12px, 14px, #7C7C7C);
+    }
+
+    &__price {
+        @include text-style(700, 18px, 23px);
+    }
+
+    &__time {
+        @include text-style(400, 14px, 18px);
+    }
+
+    &__location {
+        @include flex(stretch, flex-start, column);
+        gap: 14px;
+        padding: 14px 0;
+        margin: 14px 0;
+        border-top: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+    }
+
+    &__addr {
+        position: relative;
+
+        &--many {
+            padding-left: 30px;
+        }
+
+        &-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+        }
+        &-item {
+            @include text-style(400, 14px, 18px);
+
+            &:not(:last-child) {
+                margin-bottom: 14px;
+            }
+
+            &-name {
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

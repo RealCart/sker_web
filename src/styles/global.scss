@@ -1,0 +1,57 @@
+@import 'react-spring-bottom-sheet/dist/style.css';
+
+@import "variables";
+@import "input";
+@import "nav";
+@import "button";
+@import "bottomSheet";
+@import "layout";
+@import "dropdown";
+
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+}
+
+
+body {
+    font-family: Inter, system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.reactsvg {
+    color: inherit;
+
+    & > div {
+        @include flex(center, center);
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.page {
+    @include flex(flex-start, stretch, column);
+    flex: 1;
+    padding: 14px;
+
+
+
+    h1 {
+        @include text-style(700, 18px, 23px);
+        margin-bottom: 0;
+    }
+
+    h2 {
+        @include text-style(700, 16px, 21px);
+        margin-bottom: 0;
+    }
+
+    p {
+        @include text-style(400, 14px, 18px);
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,170 @@
+[
+	{
+		"label": "Автобетононасос",
+		"value": "concretePumpTruck"
+	},
+	{
+		"label": "Автобетосмеситель",
+		"value": "concreteMixerTruck"
+	},
+	{
+		"label": "Автовышка",
+		"value": "aerialWorkPlatform"
+	},
+	{
+		"label": "Автогрейдер",
+		"value": "motorGrader"
+	},
+	{
+		"label": "Автогудронатор",
+		"value": "bitumenDistributorTruck"
+	},
+	{
+		"label": "Автокран",
+		"value": "mobileCrane"
+	},
+	{
+		"label": "Ассенизаторская машина",
+		"value": "sewerVacuumTruck"
+	},
+	{
+		"label": "Асфальтоукладчик",
+		"value": "asphaltPaver"
+	},
+	{
+		"label": "Башенный кран",
+		"value": "towerCrane"
+	},
+	{
+		"label": "Бензовоз",
+		"value": "fuelTanker"
+	},
+	{
+		"label": "Бетононасос",
+		"value": "concretePump"
+	},
+	{
+		"label": "Бульдозер",
+		"value": "bulldozer"
+	},
+	{
+		"label": "Вибрационный каток",
+		"value": "vibratoryRoller"
+	},
+	{
+		"label": "Водовоз",
+		"value": "waterTruck"
+	},
+	{
+		"label": "Мусоровоз",
+		"value": "garbageTruck"
+	},
+	{
+		"label": "Гидромолот",
+		"value": "hydraulicHammer"
+	},
+	{
+		"label": "Грейдер",
+		"value": "grader"
+	},
+	{
+		"label": "Гусеничный кран",
+		"value": "crawlerCrane"
+	},
+	{
+		"label": "Дорожный каток",
+		"value": "roadRoller"
+	},
+	{
+		"label": "Каток грунтовый",
+		"value": "soilCompactor"
+	},
+	{
+		"label": "Кран",
+		"value": "crane"
+	},
+	{
+		"label": "Манипулятор",
+		"value": "truckLoaderCrane"
+	},
+	{
+		"label": "Мини погрузчик",
+		"value": "skidSteerLoader"
+	},
+	{
+		"label": "Мини экскаватор",
+		"value": "miniExcavator"
+	},
+	{
+		"label": "Погрузчик",
+		"value": "loader"
+	},
+	{
+		"label": "Погрузчик телескопический",
+		"value": "telescopicLoader"
+	},
+	{
+		"label": "Подъемник телескопический",
+		"value": "telescopicLifter"
+	},
+	{
+		"label": "Подъемник шарнирно-локтевой",
+		"value": "articulatedBoomLift"
+	},
+	{
+		"label": "Сваебои",
+		"value": "pileDriver"
+	},
+	{
+		"label": "Трактор",
+		"value": "tractor"
+	},
+	{
+		"label": "Трал",
+		"value": "lowboyTrailer"
+	},
+	{
+		"label": "Траншеекопатели, баровые машины",
+		"value": "trenchers"
+	},
+	{
+		"label": "Трубоукладчик",
+		"value": "pipeLayer"
+	},
+	{
+		"label": "Тягач",
+		"value": "tractorUnit"
+	},
+	{
+		"label": "Фреза",
+		"value": "millingMachine"
+	},
+	{
+		"label": "Фронтальный погрузчик",
+		"value": "frontLoader"
+	},
+	{
+		"label": "Цементировочный агрегат",
+		"value": "cementingUnit"
+	},
+	{
+		"label": "Цементовоз",
+		"value": "cementTruck"
+	},
+	{
+		"label": "Цистерны",
+		"value": "tankers"
+	},
+	{
+		"label": "Эвакуатор",
+		"value": "towTruck"
+	},
+	{
+		"label": "Экскаватор",
+		"value": "excavator"
+	},
+	{
+		"label": "Экскаватор - погрузчик",
+		"value": "backhoeLoader"
+	}
+]
