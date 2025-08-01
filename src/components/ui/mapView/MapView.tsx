@@ -1,5 +1,5 @@
 import React from 'react';
-import { YMaps, Map, Placemark } from 'react-yandex-maps';
+// import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import Location from '@/assets/images/location.png';
 import './MapView.scss';
 
@@ -14,33 +14,7 @@ const MapView: React.FC<MapViewProps> = ({ coordinates, smallMap = true, onMapCl
 
     return (
         <div className="map-view">
-            <YMaps>
-                <Map
-                    onMouseDown={onMapClick }
-                    defaultState={{
-                        center: coordinates,
-                        zoom: 13,
-                    }}
-                    width="100%"
-                    height={mapHeight}
-                    options={{
-                        suppressMapOpenBlock: true, // Убирает текст "Яндекс.Карты" внизу
-                        controls: [], // Отключает все элементы управления (например, кнопки масштабирования)
-                        disableDoubleClickZoom: true,
-                    }}
-                >
-                    {/* Добавление собственной иконки */}
-                    <Placemark
-                        geometry={coordinates}
-                        options={{
-                            iconLayout: 'default#image', // Используем собственную иконку
-                            iconImageHref: Location, // Путь к вашей иконке
-                            iconImageSize: [28, 28], // Размер иконки (ширина и высота в пикселях)
-                            iconImageOffset: [-14, -14], // Смещение иконки (чтобы центр был в точке координат)
-                        }}
-                    />
-                </Map>
-            </YMaps>
+
         </div>
     );
 };

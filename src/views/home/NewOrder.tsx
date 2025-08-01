@@ -14,7 +14,7 @@ import {Typeahead} from "react-bootstrap-typeahead";
 import SearchIcon from "@/assets/icons/search.svg";
 import LocationIcon from "@/assets/icons/location.svg";
 import EvacuationIcon from "@/assets/icons/evacuationLocation.svg";
-import {BottomSheet} from "react-spring-bottom-sheet";
+// import {BottomSheet} from "react-spring-bottom-sheet";
 import BackArrow from "@/assets/icons/arrow-left.svg";
 
 // Типы данных
@@ -165,57 +165,6 @@ const NewOrder = () => {
                     Уточнить детали
                 </Button>
             </div>
-
-            {/* Bottom Sheet */}
-            <BottomSheet
-                open={showBottomSheet}
-                onDismiss={() => setShowBottomSheet(false)}
-            >
-                <div className="bottom-sheet__header">
-                    <button className="bottom-sheet__header-back" onClick={() => setShowBottomSheet(false)}>
-                        <img src={BackArrow} className="layout__back-button-image" width={15} height={15}/>
-                    </button>
-                    <span className="bottom-sheet__header-title">
-                        Эвакуатор<br/>
-                        опишите детали задачи
-                    </span>
-                </div>
-                <div className="bottom-sheet__body">
-                    <FloatingLabel className="mb-3" controlId="floatingInput" label="Марка автомобиля*">
-                        <Form.Control type="text" placeholder="Марка автомобиля*"/>
-                    </FloatingLabel>
-                    <p className="fw-bold" style={{marginBottom: '12px'}}>Укажите адрес</p>
-                    <InputGroup className="mb-3">
-                        <FloatingLabel controlId="floatingInput" label="Адрес подачи*">
-                            <Form.Control type="text" placeholder="Адрес подачи*"/>
-                        </FloatingLabel>
-                        <InputGroup.Text>
-                            <ReactSVG src={LocationIcon} width={20} height={20}/>
-                        </InputGroup.Text>
-                    </InputGroup>
-                    <InputGroup className="mb-3">
-                        <FloatingLabel controlId="floatingInput" label="Адрес доставки*">
-                            <Form.Control type="text" placeholder="Адрес доставки*"/>
-                        </FloatingLabel>
-                        <InputGroup.Text>
-                            <ReactSVG src={EvacuationIcon} width={20} height={20}/>
-                        </InputGroup.Text>
-                    </InputGroup>
-                    <p className="fw-bold" style={{marginBottom: '12px'}}>Подробнее</p>
-                    <Form.Control className="mb-3" as="textarea"
-                                  placeholder="Опишите требования и пожелания  к технике, к исполнителю"
-                                  style={{minHeight: '150px'}}/>
-                    <Button variant="outline-primary" className="w-100">
-                        Приложите фото или документ
-                    </Button>
-                </div>
-
-                <div className="bottom-sheet__footer">
-                    <Button variant="primary" className="w-100">
-                        Оформить заказ
-                    </Button>
-                </div>
-            </BottomSheet>
         </div>
     );
 };

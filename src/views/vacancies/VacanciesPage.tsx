@@ -5,7 +5,7 @@ import { Button, FloatingLabel, Form, InputGroup, Nav } from 'react-bootstrap';
 import { ReactSVG } from 'react-svg';
 import Filter from '@/assets/icons/filter.svg';
 import BackArrow from '@/assets/icons/arrow-left.svg';
-import { BottomSheet } from 'react-spring-bottom-sheet';
+// import { BottomSheet } from 'react-spring-bottom-sheet';
 import Multiselect from '@/components/shared/multiselect/multiselect';
 import VacancyCard, { Vacancy } from '@/components/ui/cards/vacancyCard';
 
@@ -188,59 +188,7 @@ const VacanciesPage: React.FC = () => {
             <Button variant="primary" className="vacancies__add">
                 Оставьте заявку
             </Button>
-            <BottomSheet open={showBottomSheet} onDismiss={() => setShowBottomSheet(false)}>
-                <div className="bottom-sheet__header">
-                    <button className="bottom-sheet__header-back" onClick={() => setShowBottomSheet(false)}>
-                        <img src={BackArrow} className="layout__back-button-image" width={15} height={15} />
-                    </button>
-                    <span className="bottom-sheet__header-title">Фильтр</span>
-                    {/* Кнопка "Очистить" показывается только если есть активные фильтры */}
-                    {isFilterActive() && (
-                        <button className="bottom-sheet__header-clear" onClick={resetFilters}>
-                            Очистить
-                        </button>
-                    )}
-                </div>
-                <div className="bottom-sheet__body">
-                    <Multiselect
-                        options={cityOptions}
-                        selectedValues={selectedCities}
-                        setSelectedValues={setSelectedCities}
-                        placeholder="Выберите города"
-                        label="Города"
-                    />
-                    <InputGroup className="mb-3">
-                        <FloatingLabel controlId="floatingInput" label="ЗП от">
-                            <Form.Control
-                                type="number"
-                                placeholder="ЗП от"
-                                value={salaryFrom}
-                                onChange={(e) => setSalaryFrom(e.target.value)}
-                            />
-                        </FloatingLabel>
-                        <InputGroup.Text>₸</InputGroup.Text>
-                    </InputGroup>
-                    <Multiselect
-                        options={busynessOptions}
-                        selectedValues={selectedBusyness}
-                        setSelectedValues={setSelectedBusyness}
-                        placeholder="Тип занятости"
-                        label="Тип занятости"
-                    />
-                    <Multiselect
-                        options={periodOptions}
-                        selectedValues={selectedPeriod}
-                        setSelectedValues={setSelectedPeriod}
-                        placeholder="Период публикации"
-                        label="Период публикации"
-                    />
-                </div>
-                <div className="bottom-sheet__footer">
-                    <Button variant="primary" className="w-100" onClick={() => setShowBottomSheet(false)}>
-                        Показать
-                    </Button>
-                </div>
-            </BottomSheet>
+            
         </div>
     );
 };
