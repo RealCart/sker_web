@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { postReport } from "../requestslication";
+import { postReport } from "../requests/application";
 
 export function useAddReport() {
 	return useMutation({
