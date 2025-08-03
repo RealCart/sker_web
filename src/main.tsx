@@ -10,7 +10,7 @@ const queryClient = new QueryClient()
 createRoot(document.getElementById('root')!).render(
 	// <StrictMode>
 	<QueryClientProvider client={queryClient}>
-		<BrowserRouter basename="/app">
+		<BrowserRouter basename="/skerr_web">
 			<App />
 		</BrowserRouter>
 	</QueryClientProvider>
