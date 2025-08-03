@@ -25,10 +25,10 @@ export const TabProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     const tabs = useMemo(
         () => [
-            { icon: TabHome, label: 'Поиск', path: '/app/home' },
-            { icon: TabOrders, label: 'Заказы', path: '/app/orders' },
-            { icon: TabVacancies, label: 'Вакансии', path: '/app/vacancies' },
-            { icon: TabProfile, label: 'Профиль', path: '/app/profile' },
+            { icon: TabHome, label: 'Поиск', path: '/home' },
+            { icon: TabOrders, label: 'Заказы', path: '/orders' },
+            { icon: TabVacancies, label: 'Вакансии', path: '/vacancies' },
+            { icon: TabProfile, label: 'Профиль', path: '/profile' },
         ],
         []
     );

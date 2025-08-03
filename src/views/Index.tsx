@@ -14,11 +14,11 @@ function Index() {
         console.log(authState)
         const timer = setTimeout(() => {
             if (authState?.authenticated && roleState?.isPerformer) {
-                navigate("/app/home");
+                navigate("/home");
             } else if (authState?.authenticated && !roleState?.isPerformer) {
-                navigate("/app/home");
+                navigate("/home");
             } else {
-                navigate("/app/auth");
+                navigate("/auth");
             }
         }, 2000);
 

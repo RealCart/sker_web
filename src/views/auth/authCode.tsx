@@ -40,7 +40,7 @@ const AuthCode: React.FC = () => {
                 setIsInvalid(false);
                 if (setRole)
                     setRole('client')
-                navigate('/app/home')
+                navigate('/home')
             }
         })
     };

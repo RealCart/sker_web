@@ -45,7 +45,7 @@ const AuthPhone: React.FC = () => {
     // Переход на следующую страницу после успешной отправки
     useEffect(() => {
         if (sendSMS.isSuccess) {
-            navigate('/app/auth/code');
+            navigate('/auth/code');
         }
     }, [sendSMS.isSuccess, navigate]);
 
@@ -59,7 +59,7 @@ const AuthPhone: React.FC = () => {
         }
 
         if (localStorage.getItem('phone') === phoneNumber)
-            navigate('/app/auth/code');
+            navigate('/auth/code');
         else
             handleSendSMS(phoneNumber);
     };

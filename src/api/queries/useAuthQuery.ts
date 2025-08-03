@@ -31,9 +31,9 @@ export function useSignIn() {
 				const isExist = (localStorage.getItem('isUserExist')) === 'true';
 
 				if (isExist) {
-					navigate('/app/');
+					navigate('/');
 				} else {
-					navigate('/app/auth/userInfo');
+					navigate('/auth/userInfo');
 				}
 			} catch (error) {
 				console.error('Failed to handle sign-in:', error);

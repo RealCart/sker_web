@@ -7,6 +7,6 @@ interface RequestOrderParams {
 }
 
 export const postReport = async ({ data }: RequestOrderParams) => {
-	const response = await api.post<IReport>(`/application`, data);
+	const response = await api.post<IReport>(`lication`, data);
 	return response.data;
 }

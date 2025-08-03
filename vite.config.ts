@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 export default defineConfig({
-	base: '/skerr_web/app/',
+	base: '/sker_web/',
 	plugins: [
 		react(),
 		svgr({

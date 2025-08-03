@@ -57,7 +57,7 @@ const HomeLayout: React.FC<LayoutProps> = ({ children, initialHeaderTitle = "Hea
                 <div className="tabs">
                     <button className="tabs__item tabs__item--active"
                             onClick={() => {
-                                navigate('/app/')
+                                navigate('/')
                             }}
                     >
                         <ReactSVG src={TabHome} className="tabs__icon"/>
@@ -65,7 +65,7 @@ const HomeLayout: React.FC<LayoutProps> = ({ children, initialHeaderTitle = "Hea
                     </button>
                     <button className="tabs__item"
                             onClick={() => {
-                                navigate('/app/zakazy')
+                                navigate('/zakazy')
                             }}
                     >
                         <ReactSVG src={TabOrders} className="tabs__icon"/>
@@ -73,7 +73,7 @@ const HomeLayout: React.FC<LayoutProps> = ({ children, initialHeaderTitle = "Hea
                     </button>
                     <button className="tabs__item"
                             onClick={() => {
-                                navigate('/app/vacancy')
+                                navigate('/vacancy')
                             }}
                     >
                         <ReactSVG src={TabVacancies} className="tabs__icon"/>
@@ -81,7 +81,7 @@ const HomeLayout: React.FC<LayoutProps> = ({ children, initialHeaderTitle = "Hea
                     </button>
                     <button className="tabs__item"
                             onClick={() => {
-                                navigate('/app/profile')
+                                navigate('/profile')
                             }}
                     >
                         <ReactSVG src={TabProfile} className="tabs__icon"/>

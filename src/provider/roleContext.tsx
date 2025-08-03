@@ -65,7 +65,7 @@ export const RoleProvider = ({ children }: RoleProviderProps) => {
 		setRoleState({
 			isPerformer: null,
 		});
-		navigate('/app/');
+		navigate('/');
 	};
 
 	useEffect(() => {

@@ -23,8 +23,8 @@ const ProfilePolitics: React.FC = () => {
     }, [setHeaderTitle, setShowBackButton]);
 
     const listGroupItems: listGroupItem[] = [
-        { href: "/app/profile/politics", text: "Политика о конфидициальности" },
-        { href: "/app/profile/conditions", text: "Условия использования" },
+        { href: "/profile/politics", text: "Политика о конфидициальности" },
+        { href: "/profile/conditions", text: "Условия использования" },
     ];
 
     return (

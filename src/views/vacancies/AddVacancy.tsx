@@ -55,7 +55,7 @@ const AddVacancy: React.FC = () => {
     };
 
     const submitForm = (): void => {
-        navigate('/app/vacancies/place');
+        navigate('/vacancies/place');
     }
 
     // Сохранение данных в localStorage при изменении состояний

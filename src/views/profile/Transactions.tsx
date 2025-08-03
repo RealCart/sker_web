@@ -76,7 +76,7 @@ const Transactions: React.FC = () => {
                     <Button variant="primary"
                             className="transactions__empty-button"
                             onClick={() => {
-                                navigate('/app/profile-add-money')
+                                navigate('/profile-add-money')
                             }}
                     >
                         Пополнить счет

@@ -39,25 +39,25 @@ const ProfileLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             <nav className="layout__tabs">
                 <div className="tabs">
                     <button className="tabs__item"
-                            onClick={()=>{navigate('/app/')}}
+                            onClick={()=>{navigate('/')}}
                     >
                         <ReactSVG src={TabHome} className="tabs__icon" />
                         <span className="tabs__label">Поиск</span>
                     </button>
                     <button className="tabs__item"
-                            onClick={()=>{navigate('/app/zakazy')}}
+                            onClick={()=>{navigate('/zakazy')}}
                     >
                         <ReactSVG src={TabOrders} className="tabs__icon" />
                         <span className="tabs__label">Заказы</span>
                     </button>
                     <button className="tabs__item"
-                            onClick={()=>{navigate('/app/vacancy')}}
+                            onClick={()=>{navigate('/vacancy')}}
                     >
                         <ReactSVG src={TabVacancies} className="tabs__icon" />
                         <span className="tabs__label">Вакансии</span>
                     </button>
                     <button className="tabs__item tabs__item--active"
-                            onClick={()=>{navigate('/app/profile')}}
+                            onClick={()=>{navigate('/profile')}}
                     >
                         <ReactSVG src={TabProfile} className="tabs__icon" />
                         <span className="tabs__label">Профиль</span>

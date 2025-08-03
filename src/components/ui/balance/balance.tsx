@@ -20,7 +20,7 @@ const Balance: React.FC = () => {
                     variant="secondary"
                     size="sm"
                     className="balance__button balance__button--add"
-                    onClick={()=>{navigate('/app/profile-add-money')}} // Привязываем обработчик
+                    onClick={()=>{navigate('/profile-add-money')}} // Привязываем обработчик
                 >
                     Пополнить счет
                 </Button>
@@ -30,7 +30,7 @@ const Balance: React.FC = () => {
                     variant="dark"
                     size="sm"
                     className="balance__button balance__button--history"
-                    onClick={()=>{navigate('/app/profile-transactions-history')}} // Привязываем обработчик
+                    onClick={()=>{navigate('/profile-transactions-history')}} // Привязываем обработчик
                 >
                     История операций
                 </Button>

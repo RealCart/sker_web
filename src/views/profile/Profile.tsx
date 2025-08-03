@@ -64,21 +64,21 @@ const Profile: React.FC = () => {
 
 
     const commonItems = [
-        { href: "/app/profile/my-reviews", icon: MessageIcon, children: "Мои отзывы", onClick: () => data?.id && writeId(String(data.id)) },
-        { href: "/app/profile/notifications", icon: NotificationIcon, children: "Настройка уведомлений" },
-        { href: "/app/profile/about", icon: AboutIcon, children: "О приложении" },
-        { href: "/app/profile/support", icon: SupportIcon, children: "Поддержка" },
+        { href: "/profile/my-reviews", icon: MessageIcon, children: "Мои отзывы", onClick: () => data?.id && writeId(String(data.id)) },
+        { href: "/profile/notifications", icon: NotificationIcon, children: "Настройка уведомлений" },
+        { href: "/profile/about", icon: AboutIcon, children: "О приложении" },
+        { href: "/profile/support", icon: SupportIcon, children: "Поддержка" },
     ];
 
     const listGroupItems = roleState?.isPerformer
         ? commonItems
-        : [...commonItems, { href: "/app/profile/team", icon: SupportIcon, children: "Я собственник техники" }];
+        : [...commonItems, { href: "/profile/team", icon: SupportIcon, children: "Я собственник техники" }];
 
     console.log(roleState);
     console.log(data?.roles);
     return (
         <div className="profile-page profile">
-            <a href="/app/profile/edit" className="profile__tile profile__info">
+            <a href="/profile/edit" className="profile__tile profile__info">
                 <img
                     className="profile__info-image"
                     src={data?.photoUrl ? `${baseURL}/files/download/${data?.photoUrl}` : 'https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg'}
@@ -102,7 +102,7 @@ const Profile: React.FC = () => {
                     <div className="profile__rating-text">Рейтинг в Skerr</div>
                     <ReactSVG src={StarIcon} className="profile__tile-icon profile__rating-icon"/>
                 </a>
-                <a href="/app/profile/reviews" className="profile__tile profile__reviews">
+                <a href="/profile/reviews" className="profile__tile profile__reviews">
                     <div className="profile__reviews-mark profile__tile-bold">{reviews ? reviews.length : 0}</div>
                     <div className="profile__reviews-text">Отзыва о работе</div>
                     <ReactSVG src={MessageIcon} className="profile__tile-icon profile__reviews-icon"/>
@@ -126,9 +126,9 @@ const Profile: React.FC = () => {
                     onClick={() => {
                         if (data?.roles?.some((role) => role === 'ROLE_EXECUTOR')) {
                             setRole('performer');
-                            navigate('/app/profile');
+                            navigate('/profile');
                         } else {
-                            navigate('/app/profile');
+                            navigate('/profile');
                         }
                     }}
                 >
