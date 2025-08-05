@@ -51,17 +51,18 @@ const AuthPhone: React.FC = () => {
 
     // Обработчик отправки формы
     const handleSubmit = () => {
-        const phoneNumber = `+7${value.replace(/[\s()]/g, '')}`;
+        navigate('/auth/code');
+        // const phoneNumber = `+7${value.replace(/[\s()]/g, '')}`;
 
-        if (value.length < 9) {
-            setValidated(true);
-            return;
-        }
+        // if (value.length < 9) {
+        //     setValidated(true);
+        //     return;
+        // }
 
-        if (localStorage.getItem('phone') === phoneNumber)
-            navigate('/auth/code');
-        else
-            handleSendSMS(phoneNumber);
+        // if (localStorage.getItem('phone') === phoneNumber)
+        //     navigate('/auth/code');
+        // else
+        //     handleSendSMS(phoneNumber);
     };
 
     return (

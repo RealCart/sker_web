@@ -35,14 +35,15 @@ const AuthCode: React.FC = () => {
 
     // Функция для проверки кода
     const validateCode = (enteredCode: string) => {
-        sendSignInCode.mutate({ phone: phone as string, sms: Number(enteredCode) }, {
-            onSuccess: () => {
-                setIsInvalid(false);
-                if (setRole)
-                    setRole('client')
-                navigate('/home')
-            }
-        })
+        navigate('/home')
+        // sendSignInCode.mutate({ phone: phone as string, sms: Number(enteredCode) }, {
+        //     onSuccess: () => {
+        //         setIsInvalid(false);
+        //         if (setRole)
+        //             setRole('client')
+        //         navigate('/home')
+        //     }
+        // })
     };
 
     // Функция для отправки кода повторно
